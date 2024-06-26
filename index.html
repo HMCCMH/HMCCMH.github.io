@@ -83,17 +83,36 @@
 
                 <h2 >中文</h2>
                 <h3 id="Introduction">自我介绍</h3>
-                <p>博五学生，主修控制理论与控制工程，目前就读于中国科学院自动化研究所复杂系统管理与控制国家重点实验室，导师为<a href="https://people.ucas.ac.cn/~lien" target="_blank" style="text-decoration: underline;">李恩</a>
+                <p>博士研究生，主修控制理论与控制工程，目前就读于中国科学院自动化研究所复杂系统管理与控制国家重点实验室，导师为<a href="https://people.ucas.ac.cn/~lien" target="_blank" style="text-decoration: underline;">李恩</a>
                   研究员和梁自泽研究员。<br/><br/>
 
                   2019年获得四川大学工学学士学位。 <br/><br/>
   
-                  目前我的研究方向为计算机视觉和机器人控制，工作主要涉及到机器人系统集成与控制、弱监督目标检测以及6D位姿估计。接下来研究的方向将是机械臂视觉伺服控制。
+                  目前我的研究方向为机器人感知与控制，工作主要涉及到机器人系统集成与控制、弱监督目标检测、单目6D位姿估计以及机械臂视觉伺服控制。
                 </p>
                 <!-- [<a href = "files/chenminghao_resume.pdf">中文简历</a>].<br/><br/> -->
     
                 <h3 id="PublicationChinese">发表论文</h3>
                 <h4>2024</h4>
+<!-- 
+                <article class="columns">
+                  <div class="column is-3">
+                    <figure class="image">
+                      <img src="images/blank.png">
+                    </figure>
+                  </div>
+                  <div class="column">
+                    <div class="content">
+                      <p>
+                        <i>A Local Obstacle Avoidance and Global Planning Method for the Follow-the-Leader Motion of Coiled Hyper-Redundant Manipulators</i><br>
+                        Mingrui Luo, En Li, Yunong Tian, <b>Minghao Chen</b>, Cunfeng Kang, Min Tan.<br>
+                        IEEE Transactions on Industrial Informatics (<b>TII</b>), 2024.<br>
+                        <a href="https://ieeexplore.ieee.org/document/10403642" target="_blank">[<u>paper</u>]</a>
+                        <a href="https://github.com/fyviezhao/m3d-vton" target="_blank">[<u>code</u>]</a>
+                      </p>
+                    </div>
+                  </div>
+                </article> -->
 
                 <article class="columns">
                   <div class="column is-3">
@@ -322,31 +341,46 @@
                 <h4>阿里巴巴——阿里云智能CTO线——实习算法工程师</h4>
                 <p><br/>
                   2023.06-2023.08
-                  <li>负责具身智能机器人的机械臂部分链路。部署使用Realsense相机和梅卡曼德相机，利用梅卡曼德相关SDK完成实例级别的位姿估计，进一步完成机械臂手眼标定、Moveit功能包的构建使用以及基于VISP的云台跟踪随动视觉伺服。</li>
-                  <li>复现并部署适用于非结构化场景的类别级位姿估计网络模型，实现对真实场景物体的位姿估计。同时基于PCL库实现实例级别的6D位姿估计。</li><br/><br/>
+                  <li>负责具身智能机器人的机械臂部分链路，部署使用Realsense相机和梅卡曼德相机，利用梅卡曼德相机相关SDK以及基于PCL库实现实例级别位姿估计，进一步完成机械臂手眼标定、Moveit功能构建以及基于VISP视觉伺服库的云台跟踪随动视觉伺服。</li>
+                  <li>复现并部署适用于非结构化场景的类别级位姿估计SARNet网络模型，实现对真实场景的位姿估计。</li><br/><br/>
+                  <article class="columns">
+                    <div class="column is-5">
+                      <figure class="image">
+                        <img src="images/category_pose_esti.png">
+                      </figure>
+                    </div>
+                    <div class="column is-3">
+                      <figure class="image">
+                        <img src="images/follow.gif">
+                      </figure>
+                    </div>
+                  </article>  
                 </p>
 
                 <h4>中科院自动化所——架空输电线路电力作业机器人——国家重点研发计划课题：2018YFB1307404</h4>
                 <p><br/>
-                  2023.09-2024.01
-                  <li>针对弱纹理部件，通过特征融合的方法改进了GDR-Net/Epro-PnP/LinearCovariance三种算法，提升了对应模型在Linemod/Occlusion Linemod/私有防振锤螺栓数据集上的位姿估计精度；同时该方法也能提升模型在具有丰富纹理物体的数据集YCBV上的位姿估计精度。整体模型端到端推理耗时约为30ms (包含Yolox目标检测模型9ms的推理时间)，速度达到33FPS。</li>
-                  <li>利用半自动化标注技术构建现场实景下的防振锤螺栓6D位姿数据集同时利用BlenderProc2以及Blender生成了对应的基于物理的渲染数据集进行数据增强。</li><br/><br/>
+                  2024.05-至今<br/><br/>
+                  <li>基于Pybullet搭建电力作业机器人五自由度作业臂视觉伺服对准场景，同时基于VISP库搭建基于图像的视觉伺服框架以及基于CasADi非线性优化框架实现NMPC控制算法，从而完成基于NMPC和图像的视觉伺服控制框架，算法整体耗时约25ms。</li><br/><br/>
+
+
+                  2023.09-2024.02<br/><br/>
+                  <li>针对弱纹理部件，通过基于长距离依赖的特征融合算法改进了GDR-Net/Epro-PnP/LinearCovariance三种算法，提升了对应模型在Linemod/Occlusion Linemod/私有防振锤螺栓数据集上的位姿估计精度。同时该方法也能提升模型在具有丰富纹理物体的数据集YCBV上的位姿估计精度。</li>
+                  <li>利用半自动化标注技术构建现场实景下的防振锤螺栓6D位姿数据集同时利用BlenderProc2以及Blender生成了对应的基于物理的渲染数据集进行数据增强。</li>
+                  <li>改进模型在防振锤螺栓数据集上相对于基线模型提升了3.76%的平均性能，部署改进模型在RTX3080的主机上，实现位姿估计模型端到端应用，总体推理耗时约为30ms (包含YOLOX目标检测模型9ms的推理时间)，速度达到33FPS。</li>
                   <article class="columns">
                     <div class="column is-3">
                       <figure class="image">
                         <img src="images/bolt_pose_estimation.gif">
                       </figure>
                     </div>
-                  </article>  
-                  2023.02-2023.04
-                  <li>针对作业臂，采用moveit完成作业臂的路径规划(moveit的Action服务器接口编写)，为将来的上层视觉伺服任务做准备。</li><br/><br/>
+                  </article>  <br/><br/>
                   
-                  2019.07-2022.08<br/><br/>
+                  2019.07-2023.04<br/><br/>
                   <li>参与机器人机械结构的改进，在Solidworks进行机械零部件的装配，同时利用Solidworks的SW2URDF插件导出机器人URDF文件。</li>
                   <li>负责电力作业机器人的软硬件系统搭建，包括机器人控制单元的硬件电路设计与器件组装、基于ROS的机器人控制代码框架编写(基于CANopen通讯协议的机械臂关节控制数据处理、收发，ROS自定义消息类型话题发布订阅、单节点多线程订阅等)。</li>
-                  <li>负责机器人遥操作的通讯代码(基于MODBUS485通讯协议)，实现手控器对机器人的控制。</li>
-                  <li>负责机器人作业臂的控制(串级PID控制)，实现自主研制的作业臂可重复性定位精度误差达到0.837mm。</li>
-                  <li>完成电力作业机器人的实验室测试和野外应用测试以及相关的线路适应性、越障功能、作业功能、作业臂定位精度等多项项目指标。</li>
+                  <li>负责机器人遥操作的通讯代码(基于MODBUS485通讯协议)，实现手控器对机器人的遥操作。</li>
+                  <li>负责机器人作业臂的控制(串级PID控制)，实现自主研制的作业臂可重复性定位精度误差达到<b>0.837mm</b>，并采用moveit完成作业臂的路径规划(moveit的Action服务器接口编写)。</li>
+                  <li>完成电力作业机器人的实验室测试和野外应用测试，电力机器人可通过两种电力场景的越障，具备良好的线路适应性；能够实现多种障碍物的顺利越障，越障时间仅需<b>5-15秒</b>；爬坡角度可达约35度；同时具备防振锤螺栓旋拧、异物切割、断股修补等作业功能。</li>
                   <article class="columns">
                     <div class="column is-3">
                       <figure class="image">
@@ -369,7 +403,7 @@
                       </figure>
                     </div>
                   </article>  
-                  <li>通过渐进实例平衡采样算法改进了 OICR 算法，提升了模型在 VOC 数据集上的目标检测精度；同时也缓解了架空输电线路典型部件的弱监督目标检测中正负样本不平衡导致的特征支配问题。 </li><br/>
+                  <li>针对弱监督目标检测OICR模型在对架空输电线路典型部件检测过程中出现的特征支配问题，从正负样本平衡的角度提出<b>渐进实例平衡采样算法</b>，提升相对于基线模型在VOC 2007/2012数据集上约<b>5.3%/4.9%</b>的mAP性能，算法所来带来的时间开销可忽略不计；改进模型相对于基线模型在防振锤测试集上提升了约25.1%的mAP性能，有效地缓解了OICR模型在防振锤检测应用中的特征支配问题。 </li><br/>
 
 
                 </p>
